@@ -24,11 +24,13 @@ This project uses the **E-commerce Sales Prediction Dataset** from Kaggle:
 ## ⚙️ Features
 
 - Predict **units sold** for any product based on input features.  
-- Uses **Linear Regression** with preprocessing:  
-  - One-hot encoding for categorical features  
+- **Linear Regression model** trained locally on the dataset using scikit-learn.  
+- Preprocessing includes:  
+  - One-hot encoding for categorical features (`Product_Category`, `Customer_Segment`)  
   - Scaling for numeric features (`Price`, `Discount`, `Marketing_Spend`, `day`, `month`, `year`)  
-- **Interactive Flask web app** with a clean HTML/CSS frontend.  
-- Model trained locally and stored in **`sales_prediction_model.pkl`** for use in Flask app.  
+- Trained model saved as **`sales_prediction_model.pkl`** and loaded into the Flask app for predictions.  
+- **Interactive Flask web app** with a clean HTML/CSS frontend for user-friendly input and output.  
+- Users can enter product details through a form and instantly get predicted units sold.  
 
 ---
 
