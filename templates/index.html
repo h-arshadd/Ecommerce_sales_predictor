@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ecommerce Sales Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>🛒 Ecommerce Sales Prediction</h2>
+
+    <form method="POST">
+
+        <label>Product Category</label>
+        <select name="Product_Category" required>
+            <option value="">Select</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Furniture">Furniture</option>
+        </select>
+
+        <label>Customer Segment</label>
+        <select name="Customer_Segment" required>
+            <option value="">Select</option>
+            <option value="Consumer">Consumer</option>
+            <option value="Corporate">Corporate</option>
+            <option value="Home Office">Home Office</option>
+        </select>
+
+        <label>Price</label>
+        <input type="number" step="any" name="Price" required>
+
+        <label>Discount</label>
+        <input type="number" step="any" name="Discount" required>
+
+        <label>Marketing Spend</label>
+        <input type="number" step="any" name="Marketing_Spend" required>
+
+        <label>Day</label>
+        <input type="number" name="day" min="1" max="31" required>
+
+        <label>Month</label>
+        <input type="number" name="month" min="1" max="12" required>
+
+        <label>Year</label>
+        <input type="number" name="year" value="2024" required>
+
+        <button type="submit">Predict Sales</button>
+    </form>
+
+    {% if prediction is not none %}
+        <div class="result">
+            📈 Predicted Units Sold: {{ prediction | round(2) }}
+        </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
