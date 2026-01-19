@@ -35,11 +35,8 @@ This project uses the **E-commerce Sales Prediction Dataset** from Kaggle:
 ## 🖥️ Example Output
 
 ### Web Form
-![Web Form](screenshots/web_form.png)  
-*Users select product category, customer segment, enter price/discount/marketing spend and date.*
-
-### Prediction Result
-![Prediction Result](screenshots/prediction_output.png)  
+![Web Form](screenshots/interface.png)  
+*Users select product category, customer segment, enter price/discount/marketing spend and date.* 
 *Predicted units sold displayed after submitting the form.*
 
 ---
