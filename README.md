@@ -28,7 +28,7 @@ This project uses the **E-commerce Sales Prediction Dataset** from Kaggle:
   - One-hot encoding for categorical features  
   - Scaling for numeric features (`Price`, `Discount`, `Marketing_Spend`, `day`, `month`, `year`)  
 - **Interactive Flask web app** with a clean HTML/CSS frontend.  
-- Pretrained model stored in **`sales_prediction_model.pkl`**.  
+- Model trained locally and stored in **`sales_prediction_model.pkl`** for use in Flask app.  
 
 ---
 
@@ -37,6 +37,7 @@ This project uses the **E-commerce Sales Prediction Dataset** from Kaggle:
 ### Web Form
 ![Web Form](screenshots/interface.png)  
 *Users select product category, customer segment, enter price/discount/marketing spend and date.* 
+
 *Predicted units sold displayed after submitting the form.*
 
 ---
