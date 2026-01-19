@@ -37,14 +37,51 @@ This project uses the **E-commerce Sales Prediction Dataset** from Kaggle:
 ### Web Form
 ![Web Form](screenshots/interface.png)  
 *Users select product category, customer segment, enter price/discount/marketing spend and date.* 
-
 *Predicted units sold displayed after submitting the form.*
 
 ---
 
 ## 🚀 How to Use
 
+Follow these steps to run the E-commerce Sales Predictor locally:
+
 1. **Clone the repository**
-```bash
-git clone https://github.com/yourusername/flask-ecommerce-predictor.git
-cd flask-ecommerce-predictor
+    ```bash
+    git clone https://github.com/h-arshadd/flask-ecommerce-predictor.git
+    cd flask-ecommerce-predictor
+    ```
+
+2. **Create and activate a virtual environment** (optional but recommended)
+    ```bash
+    python -m venv venv
+    # Windows
+    venv\Scripts\activate
+    # Mac/Linux
+    source venv/bin/activate
+    ```
+
+3. **Install required dependencies**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. **Run the Flask app**
+    ```bash
+    python app.py
+    ```
+
+5. **Open the app in your browser**
+    ```
+    http://127.0.0.1:5000/
+    ```
+
+6. **Use the application**
+    - Fill in the product details:
+        - Product category
+        - Customer segment
+        - Price
+        - Discount
+        - Marketing spend
+        - Date (day, month, year)  
+    - Click **Predict Sales** to see the predicted units sold.
+
