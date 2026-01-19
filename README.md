@@ -1,33 +1,56 @@
-Flask E-commerce Sales Predictor
+#E-commerce Sales Predictor Using Flask and Linear Regression
 
-A Flask web application that predicts e-commerce product sales using a Linear Regression model trained on historical sales data. Users can input product details, customer segment, price, discount, marketing spend, and date to get predicted units sold.
+A Python web application that predicts e-commerce product sales based on product details, customer segment, pricing, discount, marketing spend, and date. The predictions are powered by a Linear Regression model trained on historical sales data, and served through a Flask web interface.
+
+Dataset
+
+This project uses the E-commerce Sales Prediction Dataset from Kaggle:
+E-commerce Sales Prediction Dataset
+
+It contains the following columns:
+
+Date – date of the sale
+
+Product_Category – category of the product (Electronics, Clothing, Furniture)
+
+Customer_Segment – segment of customer (Consumer, Corporate, Home Office)
+
+Price – price of the product
+
+Discount – discount applied to the product
+
+Marketing_Spend – marketing spend for the product
+
+Units_Sold – number of units sold (target variable)
 
 Features
 
-Predict units sold for products based on:
+Predicts units sold for any product based on input features.
 
-Product category
+Uses Linear Regression from scikit-learn with preprocessing:
 
-Customer segment
+One-hot encoding of categorical variables (Product_Category, Customer_Segment)
 
-Price
+Scaling of numeric features (Price, Discount, Marketing_Spend, day, month, year)
 
-Discount
+Flask web app with an interactive form for users to input product details.
 
-Marketing spend
+Clean and responsive HTML/CSS frontend for user-friendly interaction.
 
-Date (day, month, year)
+Pretrained model is stored in sales_prediction_model.pkl for quick predictions.
 
-Built with Flask and a simple, clean HTML/CSS frontend.
-
-Pretrained Linear Regression model saved using pickle.
-
-Demo Screenshot
+Example Output
+Web Interface
 
 
-(Optional: replace with your actual screenshot URL)
+Users can select product category, customer segment, enter pricing details, and date to predict sales.
 
-Installation
+Prediction Result
+
+
+Predicted units sold displayed instantly after submitting the form.
+
+How to Use
 
 Clone the repository
 
@@ -35,7 +58,7 @@ git clone https://github.com/yourusername/flask-ecommerce-predictor.git
 cd flask-ecommerce-predictor
 
 
-Create and activate virtual environment (optional but recommended)
+Create and activate a virtual environment (optional but recommended)
 
 python -m venv venv
 # Windows
@@ -48,9 +71,8 @@ Install dependencies
 
 pip install -r requirements.txt
 
-Usage
 
-Run the Flask app:
+Run the Flask app
 
 python app.py
 
@@ -60,42 +82,44 @@ Open your browser and go to:
 http://127.0.0.1:5000/
 
 
-Fill in the product details in the form and click Predict Sales to see the predicted units sold.
+Fill in product details and click Predict Sales to see the predicted units sold.
 
 Project Structure
 flask-ecommerce-predictor/
 │
 ├─ app.py                  # Flask app
-├─ ecommerce_sales_model.py# Linear Regression training script
-├─ sales_prediction_model.pkl # Pretrained model
+├─ ecommerce_sales_model.py# Model training script
+├─ sales_prediction_model.pkl # Trained Linear Regression model
 ├─ requirements.txt        # Python dependencies
 ├─ templates/
-│   └─ index.html          # HTML template
+│   └─ index.html          # HTML template for Flask
 └─ static/
-    └─ style.css           # CSS styles
+    └─ style.css           # CSS styling
 
-Dataset
+Dependencies
 
-Dataset used: E-commerce Sales Prediction Dataset on Kaggle
+Python 3.x
 
-Model is trained on historical sales data extracted from this dataset.
+Flask
 
-Model Details
+pandas
 
-Linear Regression implemented with scikit-learn.
+numpy
 
-Preprocessing:
+scikit-learn
 
-One-hot encoding for categorical features (Product_Category, Customer_Segment)
-
-Scaling for numerical features (Price, Discount, Marketing_Spend, day, month, year)
-
-Trained model is saved as sales_prediction_model.pkl for use in the Flask app.
+(All dependencies are listed in requirements.txt)
 
 Future Improvements
 
-Upgrade to more advanced ML models like Random Forest or XGBoost for better predictions.
+Upgrade to advanced ML models like Random Forest or XGBoost for better predictions.
 
-Enhance frontend UI/UX with responsive design and modern styling.
+Enhance frontend design and responsiveness.
 
 Deploy online using Render, Railway, or Heroku for public access.
+
+Add more features like seasonal trends, promotions, or user behavior for improved accuracy.
+
+License
+
+This project is open-source and available under the MIT License.
